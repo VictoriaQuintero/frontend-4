@@ -30,7 +30,8 @@
                 <li><a href="#"><i class="fa-brands fa-youtube-square"></i></a></li>
                 <li><a href="#"><i class="fa-brands fa-twitter-square"></i></a></li>
             </ul>
-            <i id="botonMe" class="fa-solid fa-bars"></i>
+            <input type="checkbox" id="check">
+            <label id="botonMe" for="check"><i  class="fa-solid fa-bars"></i></label>
         </nav>
         <div class="divPrincipal">
             <div class="divPadre">
@@ -197,7 +198,7 @@
             <form>
                 <input type="email" placeholder="Correo Electrónico" id="correo" required>
                 <input type="text" placeholder="Nombre" id="nombre" required>
-                <input type="password" placeholder="Contraseña" id="clave">
+                <input type="password" placeholder="Contraseña" id="clave" required>
                 <button type="submit" id="Action">¡Registrarme!</button>
             </form>
         </div>
@@ -214,6 +215,8 @@
             <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
         </div>
     </footer>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

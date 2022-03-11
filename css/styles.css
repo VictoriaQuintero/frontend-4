@@ -34,15 +34,15 @@ header .navBar{
 .navBar ul{
   position: absolute;
   background-color: #90ee90d2;
-  top:0;
-  left: 0;
+  top:-10px;
+  left: -10px;;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding: 2rem;
   list-style: none;
-  display: none;
+  margin-left: -200%;
 }
 
 .navBar ul li a,
@@ -55,24 +55,32 @@ header .navBar{
   text-align: center;
 }
 .navBar ul li a:hover{
-  border-bottom: 0.2rem solid gray;
+  color:white;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid white;
 }
 .navBar ul li a i{
   font-size: 2.5rem;
 }
-
+.navBar input{
+  display: none;
+}
 .navBar #botonMe{
   position: absolute;
   right: 0;
-  color:whitesmoke;
-  font-size: 2.5rem;
   margin-right: 1rem;
   cursor: pointer;
+}
+
+.navBar #botonMe i{
+  color:whitesmoke;
+  font-size: 2.5rem;
+  
 }
 .divPrincipal{
   position: relative;
   display: flex;
-  z-index: -2;
+  z-index: 0;
   bottom :0;
   width: 100%;
   margin: 9rem 0;
@@ -96,6 +104,11 @@ header .navBar{
   cursor: pointer;
   top:40%;
 }
+.flechaLeft:hover,
+.flechaRight:hover{
+  background-color: whitesmoke;
+  padding: 0.5rem;
+}
 .flechaLeft i,
 .flechaRight i{
   font-size: 2rem;
@@ -108,6 +121,16 @@ header .navBar{
 }
 #div1{
   background-image: url('https://images.pexels.com/photos/7376/startup-photos.jpg?auto=compress&cs=tinysrgb&h=650&w=940');
+  background-position: center;
+  background-size: cover;
+}
+#div2{
+  background-image: url('https://images.pexels.com/photos/5759948/pexels-photo-5759948.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+  background-position: center;
+  background-size: cover;
+}
+#div3{
+  background-image: url('https://images.pexels.com/photos/7103/writing-notes-idea-conference.jpg?auto=compress&cs=tinysrgb&h=750&w=1260');
   background-position: center;
   background-size: cover;
 }
@@ -155,7 +178,11 @@ header .navBar{
   font-family: 'PT Sans';
   font-size: 1.5rem;
 }
-
+.divsIndividuales button:hover{
+  color:gray;
+  border: 0.1rem solid black;
+  transform: translateY(-3px);
+}
 .section2{
   margin: 2rem; 
   display: flex; 
@@ -242,15 +269,22 @@ header .navBar{
 .section3 .planes{
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 3rem 0;
 }
 
 .section3 .planes div{
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding:1rem;
   border-bottom: 0.2rem solid gray;
   border-bottom-style: dotted;
+  transition: 1s ease;
+}
+.section3 .planes div:hover{
+  width: 100%;
+  transform : scale(1.2);
 }
 
 .section3 .planes div h3{
@@ -406,6 +440,7 @@ footer i{
     position: static;
     display: flex;
     flex-direction: row;
+    margin:0;
   }
   header .navBar ul li a{
     font-size: 1.2rem;
@@ -519,6 +554,9 @@ footer i{
   }
 }
 @media(min-width:1000px){
+  .section3{
+    margin: 6rem 10rem;
+  }
   .section4 .infoForm p{
     font-size: 2rem;
   }
